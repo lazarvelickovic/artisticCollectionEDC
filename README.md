@@ -7,7 +7,7 @@ This is a site which purpose is to display and digitalize the rich art collectio
 * [HTML](https://html.com/) - Site structuring
 * [SASS](https://sass-lang.com/) - Site styling
 * [JavaScript](https://www.javascript.com/) - Site functionality
-* [jQuery](https://jquery.com/) - Creating book reader for catalog
+* [jQuery](https://jquery.com/) - Creating catalog reader 
 
 ## Used API
 
