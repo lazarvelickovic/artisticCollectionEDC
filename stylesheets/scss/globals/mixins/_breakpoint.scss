@@ -1,0 +1,383 @@
+// example @include breakpoint(940) { width:80%; }
+
+@mixin breakpoint($size) {
+  @media only screen and (max-width: $size + px) { @content; }
+}
+
+@mixin breakpoint-font-size($fs1, $fs2, $fs3, $fs4, $fs5, $fs6, $fs7, $fs8, $fs9, $fs10) {
+    @include breakpoint(breakpoints(desktop-wide-3)) {
+        font-size: $fs1;
+    }
+    
+    @include breakpoint(breakpoints(desktop-wide-2)) {
+        font-size: $fs2;
+    }
+    
+    @include breakpoint(breakpoints(desktop-wide-1)) {
+        font-size: $fs3;
+    }
+
+    @include breakpoint(breakpoints(desktop-wide)) {
+        font-size: $fs4;
+    }
+    
+    @include breakpoint(breakpoints(desktop)) {
+        font-size: $fs5;
+    }
+
+    @include breakpoint(breakpoints(laptop)) {
+        font-size: $fs6;
+    }
+
+    @include breakpoint(breakpoints(tablet-wide)) {
+        font-size: $fs7;
+    }
+
+    @include breakpoint(breakpoints(tablet)) {
+        font-size: $fs8;
+    }
+
+    @include breakpoint(breakpoints(tablet-small)) {
+        font-size: $fs9;
+    }
+
+    @include breakpoint(breakpoints(phone-wide)) {
+        font-size: $fs10;
+    }
+}
+
+@mixin breakpoint-width($w1, $w2, $w3, $w4, $w5, $w6, $w7, $w8, $w9, $w10) {
+    @include breakpoint(breakpoints(desktop-wide-3)) {
+        width: $w1;
+    }
+    
+    @include breakpoint(breakpoints(desktop-wide-2)) {
+        width: $w2;
+    }
+    
+    @include breakpoint(breakpoints(desktop-wide-1)) {
+        width: $w3;
+    }
+
+    @include breakpoint(breakpoints(desktop-wide)) {
+        width: $w4;
+    }
+    
+    @include breakpoint(breakpoints(desktop)) {
+        width: $w5;
+    }
+
+    @include breakpoint(breakpoints(laptop)) {
+        width: $w6;
+    }
+
+    @include breakpoint(breakpoints(tablet-wide)) {
+        width: $w7;
+    }
+
+    @include breakpoint(breakpoints(tablet)) {
+        width: $w8;
+    }
+
+    @include breakpoint(breakpoints(tablet-small)) {
+        width: $w9;
+    }
+
+    @include breakpoint(breakpoints(phone-wide)) {
+        width: $w10;
+    }
+}
+
+@mixin breakpoint-height($h1, $h2, $h3, $h4, $h5, $h6, $h7, $h8, $h9, $h10) {
+    @include breakpoint(breakpoints(desktop-wide-3)) {
+        height: $h1;
+    }
+    
+    @include breakpoint(breakpoints(desktop-wide-2)) {
+        height: $h2;
+    }
+    
+    @include breakpoint(breakpoints(desktop-wide-1)) {
+        height: $h3;
+    }
+
+    @include breakpoint(breakpoints(desktop-wide)) {
+        height: $h4;
+    }
+    
+    @include breakpoint(breakpoints(desktop)) {
+        height: $h5;
+    }
+
+    @include breakpoint(breakpoints(laptop)) {
+        height: $h6;
+    }
+
+    @include breakpoint(breakpoints(tablet-wide)) {
+        height: $h7;
+    }
+
+    @include breakpoint(breakpoints(tablet)) {
+        height: $h8;
+    }
+
+    @include breakpoint(breakpoints(tablet-small)) {
+        height: $h9;
+    }
+
+    @include breakpoint(breakpoints(phone-wide)) {
+        height: $h10;
+    }
+}
+
+@mixin breakpoint-padding($p1, $p2, $p3, $p4, $p5, $p6, $p7, $p8, $p9, $p10) {
+    @include breakpoint(breakpoints(desktop-wide-3)) {
+        padding: $p1;
+    }
+    
+    @include breakpoint(breakpoints(desktop-wide-2)) {
+        padding: $p2;
+    }
+    
+    @include breakpoint(breakpoints(desktop-wide-1)) {
+        padding: $p3;
+    }
+
+    @include breakpoint(breakpoints(desktop-wide)) {
+        padding: $p4;
+    }
+    
+    @include breakpoint(breakpoints(desktop)) {
+        padding: $p5;
+    }
+
+    @include breakpoint(breakpoints(laptop)) {
+        padding: $p6;
+    }
+
+    @include breakpoint(breakpoints(tablet-wide)) {
+        padding: $p7;
+    }
+
+    @include breakpoint(breakpoints(tablet)) {
+        padding: $p8;
+    }
+
+    @include breakpoint(breakpoints(tablet-small)) {
+        padding: $p9;
+    }
+
+    @include breakpoint(breakpoints(phone-wide)) {
+        padding: $p10;
+    }
+}
+
+@mixin breakpoint-background-size($bs1, $bs2, $bs3, $bs4, $bs5, $bs6, $bs7, $bs8, $bs9, $bs10) {
+    @include breakpoint(breakpoints(desktop-wide-3)) {
+        background-size: $bs1;
+    }
+    
+    @include breakpoint(breakpoints(desktop-wide-2)) {
+        background-size: $bs2;
+    }
+    
+    @include breakpoint(breakpoints(desktop-wide-1)) {
+        background-size: $bs3;
+    }
+
+    @include breakpoint(breakpoints(desktop-wide)) {
+        background-size: $bs4;
+    }
+    
+    @include breakpoint(breakpoints(desktop)) {
+        background-size: $bs5;
+    }
+
+    @include breakpoint(breakpoints(laptop)) {
+        background-size: $bs6;
+    }
+
+    @include breakpoint(breakpoints(tablet-wide)) {
+        background-size: $bs7;
+    }
+
+    @include breakpoint(breakpoints(tablet)) {
+        background-size: $bs8;
+    }
+
+    @include breakpoint(breakpoints(tablet-small)) {
+        background-size: $bs9;
+    }
+
+    @include breakpoint(breakpoints(phone-wide)) {
+        background-size: $bs10;
+    }
+}
+
+@mixin breakpoint-top($t1, $t2, $t3, $t4, $t5, $t6, $t7, $t8, $t9, $t10) {
+    @include breakpoint(breakpoints(desktop-wide-3)) {
+        top: $t1;
+    }
+    
+    @include breakpoint(breakpoints(desktop-wide-2)) {
+        top: $t2;
+    }
+    
+    @include breakpoint(breakpoints(desktop-wide-1)) {
+        top: $t3;
+    }
+
+    @include breakpoint(breakpoints(desktop-wide)) {
+        top: $t4;
+    }
+    
+    @include breakpoint(breakpoints(desktop)) {
+        top: $t5;
+    }
+
+    @include breakpoint(breakpoints(laptop)) {
+        top: $t6;
+    }
+
+    @include breakpoint(breakpoints(tablet-wide)) {
+        top: $t7;
+    }
+
+    @include breakpoint(breakpoints(tablet)) {
+        top: $t8;
+    }
+
+    @include breakpoint(breakpoints(tablet-small)) {
+        top: $t9;
+    }
+
+    @include breakpoint(breakpoints(phone-wide)) {
+        top: $t10;
+    }
+}
+
+@mixin breakpoint-margin-top($mt1, $mt2, $mt3, $mt4, $mt5, $mt6, $mt7, $mt8, $mt9, $mt10) {
+    @include breakpoint(breakpoints(desktop-wide-3)) {
+        margin-top: $mt1;
+    }
+    
+    @include breakpoint(breakpoints(desktop-wide-2)) {
+        margin-top: $mt2;
+    }
+    
+    @include breakpoint(breakpoints(desktop-wide-1)) {
+        margin-top: $mt3;
+    }
+
+    @include breakpoint(breakpoints(desktop-wide)) {
+        margin-top: $mt4;
+    }
+    
+    @include breakpoint(breakpoints(desktop)) {
+        margin-top: $mt5;
+    }
+
+    @include breakpoint(breakpoints(laptop)) {
+        margin-top: $mt6;
+    }
+
+    @include breakpoint(breakpoints(tablet-wide)) {
+        margin-top: $mt7;
+    }
+
+    @include breakpoint(breakpoints(tablet)) {
+        margin-top: $mt8;
+    }
+
+    @include breakpoint(breakpoints(tablet-small)) {
+        margin-top: $mt9;
+    }
+
+    @include breakpoint(breakpoints(phone-wide)) {
+        margin-top: $mt10;
+    }
+}
+
+@mixin breakpoint-margin-left($ml1, $ml2, $ml3, $ml4, $ml5, $ml6, $ml7, $ml8, $ml9, $ml10) {
+    @include breakpoint(breakpoints(desktop-wide-3)) {
+        margin-left: $ml1;
+    }
+    
+    @include breakpoint(breakpoints(desktop-wide-2)) {
+        margin-left: $ml2;
+    }
+    
+    @include breakpoint(breakpoints(desktop-wide-1)) {
+        margin-left: $ml3;
+    }
+
+    @include breakpoint(breakpoints(desktop-wide)) {
+        margin-left: $ml4;
+    }
+    
+    @include breakpoint(breakpoints(desktop)) {
+        margin-left: $ml5;
+    }
+
+    @include breakpoint(breakpoints(laptop)) {
+        margin-left: $ml6;
+    }
+
+    @include breakpoint(breakpoints(tablet-wide)) {
+        margin-left: $ml7;
+    }
+
+    @include breakpoint(breakpoints(tablet)) {
+        margin-left: $ml8;
+    }
+
+    @include breakpoint(breakpoints(tablet-small)) {
+        margin-left: $ml9;
+    }
+
+    @include breakpoint(breakpoints(phone-wide)) {
+        margin-left: $ml10;
+    }
+}
+
+@mixin breakpoint-bottom($b1, $b2, $b3, $b4, $b5, $b6, $b7, $b8, $b9, $b10) {
+    @include breakpoint(breakpoints(desktop-wide-3)) {
+        bottom: $b1;
+    }
+    
+    @include breakpoint(breakpoints(desktop-wide-2)) {
+        bottom: $b2;
+    }
+    
+    @include breakpoint(breakpoints(desktop-wide-1)) {
+        bottom: $b3;
+    }
+
+    @include breakpoint(breakpoints(desktop-wide)) {
+        bottom: $b4;
+    }
+    
+    @include breakpoint(breakpoints(desktop)) {
+        bottom: $b5;
+    }
+
+    @include breakpoint(breakpoints(laptop)) {
+        bottom: $b6;
+    }
+
+    @include breakpoint(breakpoints(tablet-wide)) {
+        bottom: $b7;
+    }
+
+    @include breakpoint(breakpoints(tablet)) {
+        bottom: $b8;
+    }
+
+    @include breakpoint(breakpoints(tablet-small)) {
+        bottom: $b9;
+    }
+
+    @include breakpoint(breakpoints(phone-wide)) {
+        bottom: $b10;
+    }
+}

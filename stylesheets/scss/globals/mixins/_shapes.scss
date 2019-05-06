@@ -1,0 +1,111 @@
+// example: @include arrow("left", #cccccc, 10);
+
+@mixin arrow($direction, $color, $size) {
+  $pxSize: $size + px;
+  $remSize: ($size / 10) + rem;
+
+  width: 0;
+  height: 0;
+
+  @if $direction == "left"{
+    border-top: $pxSize solid transparent;
+    border-right: $pxSize solid $color;
+    border-bottom: $pxSize solid transparent;
+
+    border-top: $remSize solid transparent;
+    border-right: $remSize solid $color;
+    border-bottom: $remSize solid transparent;
+  }@else if $direction == "right"{
+    border-top: $pxSize solid transparent;
+    border-bottom: $pxSize solid transparent;
+    border-left: $pxSize solid $color;
+
+    border-top: $remSize solid transparent;
+    border-bottom: $remSize solid transparent;
+    border-left: $remSize solid $color;
+  }@else if $direction == "up"{
+    border-left: $pxSize solid transparent;
+    border-right: $pxSize solid transparent;
+    border-bottom: $pxSize solid $color;
+
+    border-left: $remSize solid transparent;
+    border-right: $remSize solid transparent;
+    border-bottom: $remSize solid $color;
+  }@else if $direction == "down"{
+    border-left: $pxSize solid transparent;
+    border-right: $pxSize solid transparent;
+    border-top: $pxSize solid $color;
+
+    border-left: $remSize solid transparent;
+    border-right: $remSize solid transparent;
+    border-top: $remSize solid $color;
+  }
+
+}
+
+@mixin shape-circle($size, $display: inline-block, $color: transparent) {
+  content: '';
+
+  line-height: $size;
+
+  display: inline-block;
+  width: $size;
+  height: $size;
+  overflow: hidden;
+
+  background-color: $color;
+  border-radius: 100%;
+
+  text-align: center;
+}
+
+@mixin shape-rectangle($aspect-ratio, $display: inline-block, $color: transparent) {
+  content: '';
+
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-bottom: $aspect-ratio;
+  overflow: hidden;
+
+  background-color: $color;
+}
+
+@mixin shape-square($size, $display: inline-block, $color: transparent) {
+  content: '';
+
+  line-height: $size;
+
+  display: inline-block;
+  width: $size;
+  height: $size;
+  overflow: hidden;
+
+  background-color: $color;
+
+  text-align: center;
+}
+
+@mixin shape-triangle-down($size, $display: inline-block, $color: transparent) {
+  content: '';
+
+  display: $display;
+  width: 0;
+  height: 0;
+
+  border-color: $color transparent transparent transparent;
+  border-style: solid;
+  border-width: $size;
+}
+
+@mixin shape-triangle-up($size, $display: inline-block, $color: transparent) {
+  content: '';
+
+  display: $display;
+  width: 0;
+  height: 0;
+
+  border-color: transparent transparent $color transparent;
+  border-style: solid;
+  border-width: $size;
+}

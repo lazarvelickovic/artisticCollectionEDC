@@ -1,0 +1,193 @@
+main {
+    
+    .contact-info {
+        @extend %overflow-hidden;
+
+        h2 {
+            margin-top: 120px;
+        }
+        
+        .about-us-link {
+            text-align: center;
+            margin-top: 30px;
+        
+            .about-us-links {
+                @extend %tab-links;
+
+                &:nth-child(2) {
+                    padding-right: 0;
+                }
+            }
+        }
+    
+        .bar {
+            margin-left: 15px;
+        }
+
+        hr {
+            width: 118px;
+            @include breakpoint-width(108px, 102px, 96px, 93px, 87px, 81px, 75px, 69px, 63px, 57px);
+        }
+
+        .contact-background {
+            width: 100%;
+            background: color(fourth);
+            margin-top: 120px;
+            @extend %dropdown-box-shadow;
+        }
+
+        .contact-info-flex {
+            @extend %flex;
+            width: 66%;
+            margin: 0 auto;
+            @include breakpoint(breakpoints(tablet-wide)) {
+                width: 100%;
+            }
+
+            .contact-info-content {
+                text-align: center;
+                width: 33.333%;
+                position: relative;
+                top: -50px;
+                @include breakpoint-top(-48px, -46px, -44px, -42px, -40px, -38px, -36px, -34px, -32px, -30px);
+
+                .contact-circle {
+                    @extend %circles;
+                    position: relative;
+                    display: inline-block;
+                    background: #fff;
+                    height: 60px;
+                    width: 60px;
+                    @include breakpoint-width(58px, 56px, 54px, 52px, 50px, 48px, 46px, 44px, 42px, 40px);
+                    @include breakpoint-height(58px, 56px, 54px, 52px, 50px, 48px, 46px, 44px, 42px, 40px);
+                    
+                    i {
+                        position: absolute;
+                        color: color(third);
+                        font-size: 29px;
+                        @extend %center-position;
+                        @include breakpoint-font-size(28.5px, 28px, 27.5px, 27px, 26.5px, 26px, 25.5px, 25px, 24.5px, 24px);
+                    }
+                }  
+                
+                @extend %p-contact-about;
+            }
+        }
+    }
+
+    .map-section {
+        @extend %overflow-hidden;
+        padding: 180px 0 100px;
+        @extend %padding-top-contact;   
+        
+        #map {
+            position: relative;
+            z-index: 100;
+            width: 66%;
+            height: 800px;
+            margin: 0 auto;
+            background: url('../../images/background/mapa.jpg') center no-repeat;
+            @include background-cover();
+            @include breakpoint-height(750px, 700px, 650px, 600px, 550px, 500px, 450px, 400px, 350px, 300px);
+        }
+
+        #map-menu {
+            position: absolute;
+            background: #fff;
+            padding: 10px;
+            font-family: 'Open Sans', sans-serif;
+            top: 7px;
+            left: 7px;
+            z-index: 1000;
+
+            input, label {
+                @include breakpoint(breakpoints(tablet)) {
+                    display: block;
+                }
+            }
+
+            label {
+                margin-right: 5px;
+            }
+        }
+
+        .opacity {
+            height: 100%;
+            background: rgba(30, 30, 30, 0.1);
+        }
+    }  
+
+    .contact-section {
+        @extend %overflow-hidden;
+        padding: 80px 0 120px;
+        @extend %padding-top-contact-section;
+        @extend %flex;
+        width: 66%;
+        margin: 0 auto;
+
+        .contact-section-content {
+            width: 100%;
+
+            form {
+                width: 75.5%;
+                margin-left: 12.25%;
+                position: relative;
+            }
+
+            .form-column {
+                display: inline-block;
+                width: 47%;
+                margin-bottom: 20px;
+
+                &:first-child {
+                    margin-right: 5%;
+                }
+            }
+
+            label {
+                font-size: 17.5px;
+                @include breakpoint-font-size(17px, 16.5px, 16px, 15.5px, 15px, 14.5px, 14px, 13.5px, 13px, 12.5);
+            }
+    
+            input {
+                background-color: color(fourth);
+                padding: 13px;
+                width: 100%;   
+                border-top: 1px solid color(third);    
+                
+                &:focus {
+                    outline: none;
+                    border-top: 1px solid color(primary);  
+                }
+            }
+    
+            textarea {
+                background-color: color(fourth);
+                width: 99.8%;
+                padding: 13px;
+
+                &:focus {
+                    outline: none;
+                    border-top: 1px solid color(primary);  
+                }
+            }
+
+            button {
+                background-color: #fff;
+                color: color(primary);
+                position: absolute;
+                right: 0.2%;
+                padding: 0;
+                margin-top: 20px;
+                font-weight: normal;
+                font-size: 17px;
+                @include breakpoint-font-size(16.5px, 16px, 15.5px, 15px, 14.5px, 14px, 13.5px, 13px, 12.5px, 12px);
+                outline: none;
+                &:hover {
+                    color: color(third);
+                    @include transition(all, 0.6s, ease-in);
+                }   
+            }
+        }     
+    }
+}

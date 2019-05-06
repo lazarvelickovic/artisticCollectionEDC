@@ -1,0 +1,18 @@
+@mixin transform($num) {
+  -ms-transform: scale($num);
+  -webkit-transform: scale($num);
+  transform: scale($num);
+}
+
+@mixin transform-rotate($num) {
+  -ms-transform: rotate($num);
+  -webkit-transform: rotate($num);
+  transform: rotate($num);
+}
+
+@mixin transform-translate($num1, $num2) {
+  -ms-transform: translate($num1, $num2);
+  -webkit-transform: translate($num1, $num2);
+  transform: translate($num1, $num2);
+}
+

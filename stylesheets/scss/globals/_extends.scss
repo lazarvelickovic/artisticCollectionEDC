@@ -1,0 +1,452 @@
+%clearfix {
+    @include clearfix();
+}
+
+%ie {
+    @media \0screen\,screen\9 {
+        opacity: 1;
+    }
+
+    @media screen and (min-width:0\0) and (min-resolution: .001dpcm) { 
+        opacity: 1;
+    }
+}
+
+%circles {
+    height: 71px;
+    width: 71px;
+    border: 1px solid color(fourth);
+    @include roundedCorners(100px);
+    cursor:pointer;
+    text-align: center;
+    z-index: 10;
+
+    &:hover {
+        border: 1px solid color(third);
+    }
+
+    @include breakpoint-width(68px, 66px, 64px, 62px, 60px, 58px, 56px, 54px, 52px, 50px);
+    @include breakpoint-height(68px, 66px, 64px, 62px, 60px, 58px, 56px, 54px, 52px, 50px);
+}
+
+%p-contact-about {
+    p {
+        color: color(fourth-dark);
+        padding: 0;
+        margin-bottom: 0;
+
+        span {
+            display: inline-block;
+            color: color(third);
+            padding: 2.5px 0;
+            font-size: 15px;
+            @include breakpoint-font-size(14.5px, 14px, 13.5px, 13px, 12.5px, 12px, 11.5px, 11px, 10.5px, 10px);
+        }
+
+        .number {
+            color: color(primary-light);
+            padding: 0;
+        }
+    }              
+}
+
+%tab-links {
+    color: color(primary);
+    font-size: 16.5px;
+    display: inline-block;
+    padding: 3px 0;
+    background: none;
+    text-transform: uppercase;
+    outline: none;
+    font-weight: normal;
+
+    &:nth-child(1), &:nth-child(2) {
+        padding-right: 15px;
+    }
+
+    &:hover {
+        color:color(third);
+    }
+
+    @include breakpoint-font-size(16px, 15.5px, 15px, 14.5px, 14px, 13.5px, 13px, 12.5px, 12px, 11.5px);
+}
+
+%tab-links-menu {
+    margin-top: 0;
+    background-color: color(fourth);
+    width: 17%;
+    height: 100%;
+    @include breakpoint-width(20%, 21%, 22%, 23%, 24%, 25%, 26%, 33%, 34%, 35%);
+            
+    .about-us-links {
+        @extend %tab-links;
+        text-align: left;
+        padding: 20px 0px 20px 15px;
+        color: color(primary-light);
+        display: block;
+        width: 100%;
+        border-bottom: 0.5px solid rgba(color(third), 0.4);
+        font-size: 15.5px;
+        @include breakpoint-font-size(15px, 14.5px, 14px, 13.5px, 13px, 12.5px, 12px, 11.5px, 11px, 10.5px);
+        @include breakpoint-padding(19px 0px 19px 14px, 18px 0px 18px 13px, 17px 0px 17px 12px, 16px 0px 16px 11px, 15px 0px 15px 9px, 14px 0px 14px 8px, 13px 0px 13px 7px, 12px 0px 12px 6px, 11px 0px 11px 5px, 10px 0px 10px 4px);
+
+        &:hover {
+            color: color(third);
+            background-color: lighten(#f3f3f3, 3%);
+            border-top: 0.5px solid rgba(color(primary-light), 0.4);
+            border-bottom: 0.5px solid rgba(color(third), 1);
+        }
+    }
+}
+
+%overflow-hidden {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    z-index: 100;
+    width: 100%;
+}
+
+%width-height {
+    width: 100%;
+    height: 100%;
+}
+
+%top-left {
+    top: 0;
+    left: 0;
+}
+
+%center-position {
+    left: 50%;
+    top: 50%;
+    @include transform-translate(-50%, -50%);
+}
+
+%position-relative {
+    position: relative;
+    display: block;
+}
+
+%hover-color {
+    color: color(third);
+    @include transition(all, 0.6s, ease-in);
+}
+
+%modal-close {
+    position: absolute;
+    font-size: 20px;
+    color: color(fourth);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+%flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+%center-position-flex {
+    justify-content: center;
+    align-items: center;
+}
+
+%i-arrows {
+    font-size: 30px;
+    cursor: pointer;
+    @include transition(all, 0.3s, ease-in);
+    color: color(fourth-dark);
+
+    &:hover {
+        color: color(third-light);
+    }
+
+    @include breakpoint-font-size(29px, 28px, 27px, 26px, 25px, 24px, 23px, 22px, 21px, 20px);
+}
+
+%padding-lef-right-none {
+    &:first-child {
+        padding-left: 0;
+    }
+
+    &:last-child {
+        padding-right: 0;
+    }
+}
+
+%img-transform {
+    transform: scale(1.05);
+    @include transition(all, 0.6s, ease-in);
+}
+
+// Box Shadow
+
+%main-link-box-shadow {
+    box-shadow: 0 0 3px #B6B5B5;
+    -webkit-box-shadow: 0 0 3px #B6B5B5;
+    -moz-box-shadow: 0 0 3px #B6B5B5;
+    -o-box-shadow: 0 0 3px #B6B5B5;
+}
+
+%main-link-box-shadow-hover {
+    box-shadow: 0 0 3px color(third);
+    -webkit-box-shadow: 0 0 3px color(third);
+    -moz-box-shadow: 0 0 3px color(third);
+    -o-box-shadow: 0 0 3px color(third);
+}
+
+%dropdown-box-shadow {
+    box-shadow: 0 0 1px #B6B5B5;
+    -webkit-box-shadow: 0 0 1px #B6B5B5;
+    -moz-box-shadow: 0 0 1px #B6B5B5;
+    -o-box-shadow: 0 0 1px #B6B5B5;
+}
+
+%dropdown-box-shadow {
+    box-shadow: 0 1px 1px rgba(#B6B5B5, 1);
+    -webkit-box-shadow: 0 1px 1px rgba(#B6B5B5, 1);
+    -moz-box-shadow: 0 1px 1px rgba(#B6B5B5, 1);
+    -o-box-shadow: 0 1px 1px rgba(#B6B5B5, 1);
+}
+
+// Margins
+
+%main-margin-top {
+    @include breakpoint(breakpoints(desktop-wide-1)) {
+        margin-top: 190px!important;
+    }
+
+    @include breakpoint(breakpoints(desktop-wide)) {
+        margin-top: 180px!important;
+    }
+
+    @include breakpoint(breakpoints(desktop)) {
+        margin-top: 170px!important;
+    }
+    
+    @include breakpoint(breakpoints(laptop)) {
+        margin-top: 160px!important;
+    }
+    
+    @include breakpoint(breakpoints(tablet-wide)) {
+        margin-top: 140px!important;
+    }
+    
+    @include breakpoint(breakpoints(tablet)) {
+        margin-top: 120px!important;
+    }
+}
+
+%main-margin-bottom {
+    @include breakpoint(breakpoints(desktop-wide-1)) {
+        margin-bottom: 190px!important;
+    }
+
+    @include breakpoint(breakpoints(desktop-wide)) {
+        margin-bottom: 180px!important;
+    }
+
+    @include breakpoint(breakpoints(desktop)) {
+        margin-bottom: 170px!important;
+    }
+    
+    @include breakpoint(breakpoints(laptop)) {
+        margin-bottom: 160px!important;
+    }
+    
+    @include breakpoint(breakpoints(tablet-wide)) {
+        margin-bottom: 140px!important;
+    }
+    
+    @include breakpoint(breakpoints(tablet)) {
+        margin-bottom: 120px!important;
+    }
+}
+
+%margin-top-index-h2 {
+    @include breakpoint(breakpoints(desktop-wide-1)) {
+        margin-top: 220px!important;
+    }
+
+    @include breakpoint(breakpoints(desktop-wide)) {
+        margin-top: 210px!important;
+    }
+
+    @include breakpoint(breakpoints(desktop)) {
+        margin-top: 200px!important;
+    }
+    
+    @include breakpoint(breakpoints(laptop)) {
+        margin-top: 190px!important;
+    }
+    
+    @include breakpoint(breakpoints(tablet-wide)) {
+        margin-top: 180px!important;
+    }
+    
+    @include breakpoint(breakpoints(tablet)) {
+        margin-top: 170px!important;
+    }
+}
+
+%margin-top-big {
+    @include breakpoint(breakpoints(desktop-wide-1)) {
+        margin-top: 250px!important;
+    }
+
+    @include breakpoint(breakpoints(desktop-wide)) {
+        margin-top: 240px!important;
+    }
+
+    @include breakpoint(breakpoints(desktop)) {
+        margin-top: 230px!important;
+    }
+    
+    @include breakpoint(breakpoints(laptop)) {
+        margin-top: 220px!important;
+    }
+    
+    @include breakpoint(breakpoints(tablet-wide)) {
+        margin-top: 210px!important;
+    }
+    
+    @include breakpoint(breakpoints(tablet)) {
+        margin-top: 200px!important;
+    }
+}
+
+%margin-bottom-big {
+    @include breakpoint(breakpoints(desktop-wide-1)) {
+        margin-bottom: 250px!important;
+    }
+
+    @include breakpoint(breakpoints(desktop-wide)) {
+        margin-bottom: 240px!important;
+    }
+
+    @include breakpoint(breakpoints(desktop)) {
+        margin-bottom: 230px!important;
+    }
+    
+    @include breakpoint(breakpoints(laptop)) {
+        margin-bottom: 220px!important;
+    }
+    
+    @include breakpoint(breakpoints(tablet-wide)) {
+        margin-bottom: 210px!important;
+    }
+    
+    @include breakpoint(breakpoints(tablet)) {
+        margin-bottom: 200px!important;
+    }
+}
+
+%margin-top-smaller {
+    @include breakpoint(breakpoints(desktop-wide-1)) {
+        margin-top: 160px!important;
+    }
+
+    @include breakpoint(breakpoints(desktop-wide)) {
+        margin-top: 150px!important;
+    }
+
+    @include breakpoint(breakpoints(desktop)) {
+        margin-top: 140px!important;
+    }
+    
+    @include breakpoint(breakpoints(laptop)) {
+        margin-top: 130px!important;
+    }
+    
+    @include breakpoint(breakpoints(tablet-wide)) {
+        margin-top: 120px!important;
+    }
+    
+    @include breakpoint(breakpoints(tablet)) {
+        margin-top: 110px!important;
+    }
+}
+
+%padding-top-contact {
+    @include breakpoint(breakpoints(desktop-wide-1)) {
+        padding-top: 160px!important;
+    }
+
+    @include breakpoint(breakpoints(desktop-wide)) {
+        padding-top: 150px!important;
+    }
+
+    @include breakpoint(breakpoints(desktop)) {
+        padding-top: 140px!important;
+    }
+    
+    @include breakpoint(breakpoints(laptop)) {
+        padding-top: 130px!important;
+    }
+    
+    @include breakpoint(breakpoints(tablet-wide)) {
+        padding-top: 120px!important;
+    }
+    
+    @include breakpoint(breakpoints(tablet)) {
+        padding-top: 110px!important;
+    }
+}
+
+%padding-top-contact-section {
+    @include breakpoint(breakpoints(desktop-wide-1)) {
+        padding-top: 60px!important;
+    }
+
+    @include breakpoint(breakpoints(desktop-wide)) {
+        padding-top: 50px!important;
+    }
+
+    @include breakpoint(breakpoints(desktop)) {
+        padding-top: 40px!important;
+    }
+    
+    @include breakpoint(breakpoints(laptop)) {
+        padding-top: 30px!important;
+    }
+    
+    @include breakpoint(breakpoints(tablet-wide)) {
+        padding-top: 20px!important;
+    }
+    
+    @include breakpoint(breakpoints(tablet)) {
+        padding-top: 10px!important;
+    }
+}
+
+%margin-bottom-smaller {
+    @include breakpoint(breakpoints(desktop-wide-1)) {
+        margin-bottom: 160px!important;
+    }
+
+    @include breakpoint(breakpoints(desktop-wide)) {
+        margin-bottom: 150px!important;
+    }
+
+    @include breakpoint(breakpoints(desktop)) {
+        margin-bottom: 140px!important;
+    }
+    
+    @include breakpoint(breakpoints(laptop)) {
+        margin-bottom: 130px!important;
+    }
+    
+    @include breakpoint(breakpoints(tablet-wide)) {
+        margin-bottom: 120px!important;
+    }
+    
+    @include breakpoint(breakpoints(tablet)) {
+        margin-bottom: 110px!important;
+    }
+}
+
+
+
+
+
+

@@ -1,0 +1,166 @@
+// Footer
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: color(primary);
+    @extend %ie;
+
+    @include breakpoint(breakpoints(tablet-wide)) {
+        position: relative;
+    }
+
+    a.up {
+        display: block;
+
+        &:visited {
+            color: color(primary);
+        }
+
+        .arrow-up {
+            width: 35px;
+            height: 35px;
+            margin: auto;
+            position: relative;
+            text-align: center;
+            top: -17px;
+            border: 1px solid color(fourth);
+            border-bottom-color: color(primary);
+            border-right-color: color(primary);
+            @include transform-rotate(-135deg);
+    
+            i {
+                position: absolute;
+                top: 11px;
+                left: 10.5px;
+                border: solid;
+                border-width: 0 3px 3px 0;
+                display: inline-block;
+                padding: 4px;
+                @include animation('bounce-fade-up 1.2s infinite');
+    
+                
+                @include breakpoint(breakpoints(desktop-wide-2)) {
+                    border-width: 0 2.7px 2.7px 0;
+                    padding: 3.6px;
+                }
+                
+                @include breakpoint(breakpoints(desktop-wide-1)) {
+                    border-width: 0 2.4px 2.4px 0;
+                    padding: 3.2px;
+                }          
+                
+                @include breakpoint(breakpoints(desktop)) {
+                    border-width: 0 2.2px 2.2px 0;
+                    padding: 3px;
+                }
+            
+                @include breakpoint(breakpoints(tablet-wide)) {
+                    border-width: 0 2px 2px 0;
+                    padding: 2.8px;
+                }
+            
+                @include breakpoint(breakpoints(tablet-small)) {
+                    border-width: 0 1.8px 1.8px 0;
+                    padding: 2.6px;
+                }
+            }  
+
+            @include breakpoint(breakpoints(desktop-wide-2)) {
+                width: 33px;
+                height: 33px;
+                top: -16px;
+            }
+            
+            @include breakpoint(breakpoints(desktop-wide-1)) {
+                width: 31px;
+                height: 31px;
+                top: -15px;
+            }
+
+            @include breakpoint(breakpoints(desktop)) {
+                width: 29px;
+                height: 29px;
+                top: -14px;
+            }
+        
+            @include breakpoint(breakpoints(tablet-wide)) {
+                width: 28px;
+                height: 28px;
+                top: -13.5px;
+            }
+        
+            @include breakpoint(breakpoints(tablet-small)) {
+                width: 26px;
+                height: 26px;
+                top: -12.5px;
+            }
+        }
+    }
+
+    // Footer menu
+
+    .footer-menu{
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 70px;
+        overflow: hidden;
+        position: relative; 
+    
+        a {
+            font-size: 16px;
+            padding: 1px 19px;
+            color: color(fourth);
+            @extend %padding-lef-right-none;
+
+            &:hover {
+                color: color(third);
+            }
+
+            @include breakpoint-font-size(15.5px, 15px, 14.5px, 14px, 13.5px, 13px, 12.5px, 12px, 11.5px, 11px);
+
+            @include breakpoint(breakpoints(desktop)) {
+                padding: 1px 16px;
+            }
+        
+            @include breakpoint(breakpoints(tablet-wide)) {
+                padding: 1px 13px;
+            }
+        
+            @include breakpoint(breakpoints(tablet-small)) {
+                padding: 1px 10px;
+            }
+        }
+    }
+
+    .copyright{
+        width: 80%;
+        position: relative;
+        font-weight: 300;
+        margin: 10px auto 0;
+        padding: 0 0 40px;
+        text-align: center;
+        font-size: 13px;
+        line-height: 30px;
+        color: color(third);
+
+        span {
+            &:nth-child(1) {
+                font-size: 14.5px;
+
+                @include breakpoint-font-size(14px, 13.5px, 13px, 12.5px, 12px, 11.5px, 11px, 10.5px, 10px, 9.5px);
+            }
+
+            &:nth-child(2) {
+                font-size: 11.7px;
+
+                @include breakpoint-font-size(11.2px, 10.7px, 10.2px, 9.7px, 9.2px, 8.7px, 8.2px, 7.7px, 7.2px, 6.7px);
+            }
+        }
+
+        @include breakpoint-font-size(12.5px, 12px, 11.5px, 11px, 10.5px, 10px, 9.5px, 9px, 8.5px, 8px);
+    }
+} 
+

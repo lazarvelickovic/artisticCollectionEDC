@@ -1,0 +1,196 @@
+.about {
+
+    h2 {
+        margin-top: 120px;
+    }
+    
+    .about-us-link {
+        text-align: center;
+        margin-top: 30px;
+    
+        .about-us-links {
+            @extend %tab-links;
+
+            &:nth-child(2) {
+                padding-right: 0;
+            }
+        }
+    }
+
+    .bar {
+        margin-left: 15px;
+    }
+
+    .about-img {
+        width: 50%;
+        margin: 0 auto;
+        padding: 80px 0 40px;
+
+        @include breakpoint(breakpoints(desktop-wide-1)) {
+            width: 54%;
+        }
+
+        @include breakpoint(breakpoints(desktop-wide)) {
+            width: 59%;
+        }
+
+        @include breakpoint(breakpoints(desktop)) {
+            width: 66%;
+            flex-wrap: wrap;
+        }
+
+        @include breakpoint(breakpoints(laptop)) {
+            width: 80%;
+        }
+    }
+
+    .about-text {
+        @extend %overflow-hidden;
+
+        .about-text-flex {
+            width: 66%;
+            margin: 0 auto;
+            padding: 80px 0 40px;
+            @extend %flex;
+
+            @include breakpoint(breakpoints(desktop-wide-1)) {
+                width: 70%;
+            }
+
+            @include breakpoint(breakpoints(desktop-wide)) {
+                width: 75%;
+            }
+
+            @include breakpoint(breakpoints(desktop)) {
+                width: 82%;
+                flex-wrap: wrap;
+            }
+
+            @include breakpoint(breakpoints(laptop)) {
+                width: 96%;
+            }
+
+            .about-text-img {
+                width: 29%;
+                @extend %flex;
+                flex-direction: column;
+                height: auto;
+                position: relative;
+
+                @include breakpoint(breakpoints(desktop-wide-3)) {
+                    width: 31%;
+                }
+
+                @include breakpoint(breakpoints(tablet-wide)) {
+                    width: 80%;
+                    margin: 0 auto;
+                }
+
+                @include breakpoint(breakpoints(tablet)) {
+                    width: 90%;
+                }
+
+                .about-text-img-div {
+                    position: relative;
+                    overflow: hidden;
+                    margin-bottom: 15px;
+                    cursor: pointer;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }   
+
+                    &:first-child {
+                        @include breakpoint(breakpoints(tablet-wide)) {
+                            margin-top: 80px;
+                            margin-bottom: 45px;
+                        }
+                    } 
+
+                    &:nth-child(2) {
+                        @include breakpoint(breakpoints(tablet-wide)) {
+                            margin-bottom: 45px;
+                        }
+                    } 
+                    
+                    &:hover {
+                        img {
+                            @include transition(all, 0.6s, ease-in);
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+            }
+
+            .about-text-content {
+                width: 50%;
+
+                @include breakpoint(2020) {
+                    width: 66%;
+                }    
+
+                @include breakpoint(breakpoints(tablet-wide)) {
+                    width: 98%;
+                    margin: 0 auto;
+                }
+
+                img {
+                    display: none;
+                    width: 98%;
+                    margin: 0 auto 30px;               
+                }
+            }
+        }
+
+        .opacity {
+            background: rgba(color(third), 0);
+            @include transition(all, 0.6s, ease-in);
+            height: 100%;
+        
+            &:hover {
+                background: rgba(color(third), 0.8);                    
+            }
+        }
+    } 
+
+    .catalog {
+        @extend %overflow-hidden;
+        width: 100%;
+        padding-bottom: 160px;
+        
+        .catalog-item {
+            width: 40%;
+            margin: 60px auto 0;       
+            @extend %position-relative;
+            overflow: hidden;
+            cursor: pointer;
+
+            .opacity {
+                background: rgba(color(third), 0);
+                @include transition(all, 0.6s, ease-in);
+                height: 99.5%;
+                border: 0.5px solid rgba(color(primary-light), 0.3);
+
+                &:hover {
+                    background: rgba(color(third), 0.8);  
+                    height: 100%;                  
+                }
+            }
+
+            &:hover {
+                img {
+                    @include transition(all, 0.6s, ease-in);
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

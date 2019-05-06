@@ -1,0 +1,151 @@
+// AUTHORS
+
+.authors {
+    @extend %overflow-hidden;
+
+    h2 {
+        margin-top: 120px;
+    }
+    
+    .about-us-link {
+        text-align: center;
+        margin-top: 30px;
+    
+        .about-us-links {
+            @extend %tab-links;
+
+            &:nth-child(2) {
+                padding-right: 0;
+            }
+        }
+    }
+
+    .bar {
+        margin-left: 15px;
+    }
+
+    .authors-content {
+        @extend %overflow-hidden;
+        padding-bottom: 165px;
+    
+        .authors-flex {
+            padding-top: 70px;
+            margin: 0 auto;
+            width: 66%;
+            display: flex;
+            position: relative;
+
+            @include breakpoint(breakpoints(desktop-wide-2)) {
+                width: 80%;
+            }
+
+            @include breakpoint(breakpoints(desktop-wide)) {
+                width: 80%;
+            }
+
+            @include breakpoint(breakpoints(desktop)) {
+                width: 85%;
+            }
+
+            @include breakpoint(breakpoints(tablet-wide)) {
+                width: 98%;
+            }
+
+            @include breakpoint(breakpoints(tablet-small)) {
+                flex-wrap: wrap;
+            }
+
+            .about-us-link {
+                margin-right: 3%;
+                @extend %tab-links-menu;
+
+                @include breakpoint(breakpoints(tablet-small)) {
+                    width: 100%;
+                    margin-right: 0;
+                    margin-bottom: 60px;
+                }
+
+                button {
+                    @include breakpoint(breakpoints(tablet-small)) {
+                        text-align: center!important;
+                        padding-left: 0!important;
+                        padding-right: 0!important;
+                    }
+                }
+            }
+        }
+
+        .authors-main-content {
+            @extend %overflow-hidden;
+            .authors-img {
+                @extend %clearfix;
+                width: 12%;
+                float: left;
+                margin-right: 20px;
+                img {
+                    border: 0.5px solid rgba(color(primary-light), 0.3);
+                }
+          
+                @include breakpoint-width(13%, 14%, 15%, 16%, 17%, 18%, 19%, 25%, 30%, 35%);
+            }
+
+            .authors-works {
+                @extend %overflow-hidden;
+        
+                h2 {
+                    margin-top: 80px;
+                }
+               
+                .authors-works-flex {
+                    @extend %flex;
+                    overflow: hidden;
+                    flex-wrap: wrap;
+                    position: relative;
+                    height: 330px;
+                    @include breakpoint-height(300px, 270px, 240px, 210px, 180px, 150px, 170px, 140px, 110px, 90px);
+                    margin: 60px auto 0; 
+        
+                    .authors-works-item {
+                        position: relative;
+                        @include animation('fade-in 1.5s ease-in forwards');
+                        overflow: hidden;
+                        cursor: pointer;
+                        align-self: center;
+        
+                        img {
+                            height: 330px;
+                            @include breakpoint-height(300px, 270px, 240px, 210px, 180px, 150px, 170px, 140px, 110px, 90px);
+                            width: auto;
+                        }
+        
+                        .opacity {
+                            background: rgba(color(third), 0);
+                            @include transition(all, 0.6s, ease-in);
+                            height: 100%;
+                            border: 0.5px solid rgba(color(primary-light), 0.3);
+                            height: 99%;
+        
+                            &:hover {
+                                background: rgba(color(third), 0.8);   
+                                bottom: -5px;   
+                                height: 100%;              
+                            }
+                        }
+        
+                        &:hover {
+                            img {
+                                @include transition(all, 0.6s, ease-in);
+                                transform: scale(1.05);
+                            }
+                        }
+                    }
+                } 
+            }
+        }
+    }
+}
+
+
+    
+
+

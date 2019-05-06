@@ -1,0 +1,101 @@
+// Colors
+
+$colors: (
+	'red': #FF4136,
+	'blue': #0074D9,
+	'yellow': #FFDC00,
+	'orange': #FF851B,
+	'gray-dark': #010101,
+	'gray': #2D2D2D,
+	'gray-light': #787677,
+	'brown': #AE8746,
+	'tan': #CFAE5D,
+	'putty': #C8AB7D,
+	'gold': #C9B060,
+	'cream': #EEE580,
+	'casablanca': #F1B95C,
+	'shuttle-gray': #5B6770,
+	'rice-cake': #ECEAE4,
+	'bright-gray': #56585c,
+	'very-light-gray': #C7C7C8,
+	'black-pearl': #0D1823,
+	'wild-willow': #a0ce6c,
+	'cream-can': #f3ba53,
+	'silver-sand': #c2c5c7,
+	'oslo-gray': #94979a,
+	'iron': #d0d3d5,
+	'cararra': #f4f3f1,
+	'gray-chateau': #9fa1a3,
+	'alice-blue': #EDF1F5,
+	'white-smoke': #F4F4F4,
+	'golden-tanoi': #ffcc66,
+
+	primary:  #3c3c3c,
+    primary-light: lighten(#3c3c3c, 40%),
+	primary-dark: darken(#3c3c3c, 40%),
+	secondary: #fff, 
+	secondary-light: lighten(#fff, 40%),
+	secondary-dark: darken(#fff, 40%),
+	third: #ada074,
+	third-light: lighten(#ada074, 20%),
+	third-dark: darken(#ada074, 40%),
+	fourth: #f3f3f3,
+	fourth-light: lighten(#f3f3f3, 40%),
+	fourth-dark: darken(#f3f3f3, 25%),
+	fourth-start-page: darken(#f3f3f3, 10%),
+);
+  
+$color-white:           #FFF;
+$color-black:           #000;
+  
+// Purpose Colors
+
+$base-font-color: color(primary);
+$action-color: #000;
+$hover-color: #fff;
+$base-background-color: $color-white;
+  
+$base-border-color: #000;
+$base-border: 1px solid $base-border-color;
+$base-border-radius: 2px;
+  
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.25);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+	
+
+// Layout Breakpoints
+
+$maxWidth: 1280;
+$breakpoints: (
+    phone:        	400,
+    phone-wide:   	480,
+    phablet:      	560,
+    tablet-small: 	640,
+    tablet:       	768,
+    tablet-wide:  	1024,
+    laptop:       	1248,
+	desktop:      	1440,
+	desktop-wide: 	1640,
+	desktop-wide-1: 1840,
+	desktop-wide-2: 2040,
+	desktop-wide-3: 2240,
+);
+
+// Font Sizes
+
+$regularSize: 12;
+
+
+// Font Families
+
+$helvetica: Helvetica, Arial, sans-serif;
+$padding: 15px;
+$borders: 15px;
+$small-spacing: 15px;
+$base-spacing: 30px;
+$grid-columns: 12;
+
+// Margin
+
+$main-margin: 200px;
+$secondary-margin: 60px;

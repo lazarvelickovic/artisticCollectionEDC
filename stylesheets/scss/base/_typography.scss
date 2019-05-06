@@ -1,0 +1,109 @@
+// Font Families 
+@include font-face(ResavskaBGSans-Italic, ResavskaBGSans-Italic);
+@include font-face(ResavskaBGSans-Bold, ResavskaBGSans-Bold);
+
+$base-font-family:     'Resavska BG Sans', sans;
+$secondary-font-family: Palatino Linotype, Palatino, serif;
+$body-font-family:      $base-font-family;
+$heading-font-family:   $body-font-family;
+ 
+// Font Sizes
+
+$base-font-size: 15px;
+
+// Line height
+
+$base-line-height:    1;
+$heading-line-height: 1.2;
+
+// Body
+
+body {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  -webkit-font-smoothing: subpixel-antialiased!important;
+  font-weight: 400;
+  height: 100%;
+}
+
+// Headings
+
+h1, h2, h3 {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: $heading-line-height;
+  text-align: center;
+}
+
+h1 {
+  color: color(fourth);
+  font-size: 19.5px;
+  @include breakpoint-font-size(19px, 18.5px, 18px, 17.5px, 17px, 16.5px, 16px, 15.5px, 15px, 14.5px);
+}
+
+h2 {
+  font-size: 28.5px;
+  margin-top: $main-margin;
+  @include breakpoint-font-size(28px, 27px, 26.5px, 25.5px, 24.5px, 24px, 23px, 22.5px, 22px, 21.5px);
+  @extend %ie;
+}
+
+h3 {
+  font-size: 16px;
+  position: relative;
+  @include breakpoint-font-size(15.5px, 15px, 14.5px, 14px, 13.5px, 13px, 12.5px, 12px, 11.5px, 11px);
+  @extend %ie;
+}
+
+h4 {
+  font-size: 18px; 
+  margin: 50px 0 20px;
+  @include breakpoint-font-size(17.5px, 17px, 16.5px, 16px, 15.5px, 15px, 14.5px, 14px, 13.5px, 13px);
+}
+
+// Other elements
+
+p {
+  margin: 0 0 $small-spacing;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  font-size: 15.5px;
+  @include transition(all, 0.2s, ease-in);
+}
+
+::selection {
+  background: color(third);
+  color:white;
+}
+
+::-moz-selection {
+  background: color(third);
+  color:white;
+}
+
+hr {
+  color: color(fourth-dark);
+  background-color: color(fourth-dark);
+  margin: auto;
+  margin-top: 30px;
+  height: 1px;
+  width: 137px;
+  border: 0;
+  @include breakpoint-width(127px, 121px, 115px, 109px, 103px, 97px, 91px, 85px, 79px, 73px);
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+
