@@ -7,6 +7,11 @@ This is a site which purpose is to display and digitalize the rich art collectio
 * [HTML](https://html.com/) - Site structuring
 * [SASS](https://sass-lang.com/) - Site styling
 * [JavaScript](https://www.javascript.com/) - Site functionality
+* [jQuery](https://jquery.com/) - Creating book reader for catalog
+
+## Used API
+
+* [Mapbox GL JS](https://www.mapbox.com/about/maps/) - For the map construction
 
 ## Folder Structure
 
