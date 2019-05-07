@@ -364,67 +364,67 @@ main .contact-info .contact-info-flex .contact-info-content p .number {
 .artistic-collection .artistic-collection-main-content .artistic-collection-flex .about-us-link-tab, .authors .authors-content .authors-flex .about-us-link {
   margin-top: 0;
   background-color: #f3f3f3;
-  width: 17%;
+  width: 17.5%;
   height: 100%;
 }
 
 @media only screen and (max-width: 2240px) {
   .artistic-collection .artistic-collection-main-content .artistic-collection-flex .about-us-link-tab, .authors .authors-content .authors-flex .about-us-link {
-    width: 20%;
+    width: 20.5%;
   }
 }
 
 @media only screen and (max-width: 2040px) {
   .artistic-collection .artistic-collection-main-content .artistic-collection-flex .about-us-link-tab, .authors .authors-content .authors-flex .about-us-link {
-    width: 21%;
+    width: 21.5%;
   }
 }
 
 @media only screen and (max-width: 1840px) {
   .artistic-collection .artistic-collection-main-content .artistic-collection-flex .about-us-link-tab, .authors .authors-content .authors-flex .about-us-link {
-    width: 22%;
+    width: 22.5%;
   }
 }
 
 @media only screen and (max-width: 1640px) {
   .artistic-collection .artistic-collection-main-content .artistic-collection-flex .about-us-link-tab, .authors .authors-content .authors-flex .about-us-link {
-    width: 23%;
+    width: 23.5%;
   }
 }
 
 @media only screen and (max-width: 1440px) {
   .artistic-collection .artistic-collection-main-content .artistic-collection-flex .about-us-link-tab, .authors .authors-content .authors-flex .about-us-link {
-    width: 24%;
+    width: 24.5%;
   }
 }
 
 @media only screen and (max-width: 1248px) {
   .artistic-collection .artistic-collection-main-content .artistic-collection-flex .about-us-link-tab, .authors .authors-content .authors-flex .about-us-link {
-    width: 25%;
+    width: 25.5%;
   }
 }
 
 @media only screen and (max-width: 1024px) {
   .artistic-collection .artistic-collection-main-content .artistic-collection-flex .about-us-link-tab, .authors .authors-content .authors-flex .about-us-link {
-    width: 26%;
+    width: 26.5%;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .artistic-collection .artistic-collection-main-content .artistic-collection-flex .about-us-link-tab, .authors .authors-content .authors-flex .about-us-link {
-    width: 33%;
+    width: 33.5%;
   }
 }
 
 @media only screen and (max-width: 640px) {
   .artistic-collection .artistic-collection-main-content .artistic-collection-flex .about-us-link-tab, .authors .authors-content .authors-flex .about-us-link {
-    width: 34%;
+    width: 34.5%;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .artistic-collection .artistic-collection-main-content .artistic-collection-flex .about-us-link-tab, .authors .authors-content .authors-flex .about-us-link {
-    width: 35%;
+    width: 35.5%;
   }
 }
 
@@ -4305,7 +4305,7 @@ nav.books a {
 }
 
 .about h2 {
-  margin-top: 120px;
+  margin-top: 160px;
 }
 
 .about .about-us-link {
@@ -4321,42 +4321,10 @@ nav.books a {
   margin-left: 15px;
 }
 
-.about .about-img {
-  width: 50%;
-  margin: 0 auto;
-  padding: 80px 0 40px;
-}
-
-@media only screen and (max-width: 1840px) {
-  .about .about-img {
-    width: 54%;
-  }
-}
-
-@media only screen and (max-width: 1640px) {
-  .about .about-img {
-    width: 59%;
-  }
-}
-
-@media only screen and (max-width: 1440px) {
-  .about .about-img {
-    width: 66%;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-}
-
-@media only screen and (max-width: 1248px) {
-  .about .about-img {
-    width: 80%;
-  }
-}
-
 .about .about-text .about-text-flex {
   width: 66%;
   margin: 0 auto;
-  padding: 80px 0 40px;
+  padding: 120px 0 40px;
 }
 
 @media only screen and (max-width: 1840px) {
@@ -4418,7 +4386,6 @@ nav.books a {
   position: relative;
   overflow: hidden;
   margin-bottom: 15px;
-  cursor: pointer;
 }
 
 .about .about-text .about-text-flex .about-text-img .about-text-img-div:last-child {
@@ -4436,13 +4403,6 @@ nav.books a {
   .about .about-text .about-text-flex .about-text-img .about-text-img-div:nth-child(2) {
     margin-bottom: 45px;
   }
-}
-
-.about .about-text .about-text-flex .about-text-img .about-text-img-div:hover img {
-  -webkit-transition: all 0.6s ease-in;
-  transition: all 0.6s ease-in;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
 }
 
 .about .about-text .about-text-flex .about-text-content {
@@ -4468,27 +4428,42 @@ nav.books a {
   margin: 0 auto 30px;
 }
 
-.about .about-text .opacity {
-  background: rgba(173, 160, 116, 0);
-  -webkit-transition: all 0.6s ease-in;
-  transition: all 0.6s ease-in;
-  height: 100%;
-}
-
-.about .about-text .opacity:hover {
-  background: rgba(173, 160, 116, 0.8);
-}
-
 .about .catalog {
   width: 100%;
   padding-bottom: 160px;
 }
 
 .about .catalog .catalog-item {
-  width: 40%;
+  width: 28%;
   margin: 60px auto 0;
   overflow: hidden;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1840px) {
+  .about .catalog .catalog-item {
+    width: 33%;
+  }
+}
+
+@media only screen and (max-width: 1640px) {
+  .about .catalog .catalog-item {
+    width: 38%;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .about .catalog .catalog-item {
+    width: 40%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .about .catalog .catalog-item {
+    width: 48%;
+  }
 }
 
 .about .catalog .catalog-item .opacity {
@@ -4512,7 +4487,7 @@ nav.books a {
 }
 
 main .contact-info h2 {
-  margin-top: 120px;
+  margin-top: 160px;
 }
 
 main .contact-info .about-us-link {
@@ -4970,7 +4945,7 @@ main .map-section .opacity {
 }
 
 main .contact-section {
-  padding: 80px 0 120px;
+  padding: 80px 0 150px;
   width: 66%;
   margin: 0 auto;
 }
@@ -4980,9 +4955,30 @@ main .contact-section .contact-section-content {
 }
 
 main .contact-section .contact-section-content form {
-  width: 75.5%;
-  margin-left: 12.25%;
+  width: 50%;
+  margin-left: 25%;
   position: relative;
+}
+
+@media only screen and (max-width: 2040px) {
+  main .contact-section .contact-section-content form {
+    width: 55%;
+    margin-left: 22.5%;
+  }
+}
+
+@media only screen and (max-width: 1640px) {
+  main .contact-section .contact-section-content form {
+    width: 60%;
+    margin-left: 20%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  main .contact-section .contact-section-content form {
+    width: 85%;
+    margin-left: 7.5%;
+  }
 }
 
 main .contact-section .contact-section-content .form-column {
@@ -5161,7 +5157,7 @@ main .contact-section .contact-section-content button:hover {
 }
 
 .artistic-collection h2 {
-  margin-top: 120px;
+  margin-top: 160px;
 }
 
 .artistic-collection .about-us-link {
@@ -5517,7 +5513,7 @@ main .contact-section .contact-section-content button:hover {
 }
 
 .authors h2 {
-  margin-top: 120px;
+  margin-top: 160px;
 }
 
 .authors .about-us-link {
@@ -7102,7 +7098,7 @@ main .authors #authors {
 main .authors .authors-flex {
   position: relative;
   width: 66%;
-  margin: 60px auto 100px;
+  margin: 60px auto 200px;
 }
 
 main .authors .authors-flex i {
@@ -7143,7 +7139,7 @@ main .authors .authors-flex .authors-item .opacity {
   background: rgba(173, 160, 116, 0);
   -webkit-transition: all 0.6s ease-in;
   transition: all 0.6s ease-in;
-  height: 99%;
+  height: 99.5%;
   border: 1px solid #f3f3f3;
 }
 

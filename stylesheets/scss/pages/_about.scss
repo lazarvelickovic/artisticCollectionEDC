@@ -1,7 +1,7 @@
 .about {
 
     h2 {
-        margin-top: 120px;
+        margin-top: 160px;
     }
     
     .about-us-link {
@@ -21,36 +21,13 @@
         margin-left: 15px;
     }
 
-    .about-img {
-        width: 50%;
-        margin: 0 auto;
-        padding: 80px 0 40px;
-
-        @include breakpoint(breakpoints(desktop-wide-1)) {
-            width: 54%;
-        }
-
-        @include breakpoint(breakpoints(desktop-wide)) {
-            width: 59%;
-        }
-
-        @include breakpoint(breakpoints(desktop)) {
-            width: 66%;
-            flex-wrap: wrap;
-        }
-
-        @include breakpoint(breakpoints(laptop)) {
-            width: 80%;
-        }
-    }
-
     .about-text {
         @extend %overflow-hidden;
 
         .about-text-flex {
             width: 66%;
             margin: 0 auto;
-            padding: 80px 0 40px;
+            padding: 120px 0 40px;
             @extend %flex;
 
             @include breakpoint(breakpoints(desktop-wide-1)) {
@@ -94,7 +71,6 @@
                     position: relative;
                     overflow: hidden;
                     margin-bottom: 15px;
-                    cursor: pointer;
                     &:last-child {
                         margin-bottom: 0;
                     }   
@@ -110,14 +86,7 @@
                         @include breakpoint(breakpoints(tablet-wide)) {
                             margin-bottom: 45px;
                         }
-                    } 
-                    
-                    &:hover {
-                        img {
-                            @include transition(all, 0.6s, ease-in);
-                            transform: scale(1.05);
-                        }
-                    }
+                    }               
                 }
             }
 
@@ -140,16 +109,6 @@
                 }
             }
         }
-
-        .opacity {
-            background: rgba(color(third), 0);
-            @include transition(all, 0.6s, ease-in);
-            height: 100%;
-        
-            &:hover {
-                background: rgba(color(third), 0.8);                    
-            }
-        }
     } 
 
     .catalog {
@@ -158,11 +117,28 @@
         padding-bottom: 160px;
         
         .catalog-item {
-            width: 40%;
+            width: 28%;
             margin: 60px auto 0;       
             @extend %position-relative;
             overflow: hidden;
             cursor: pointer;
+
+            @include breakpoint(breakpoints(desktop-wide-1)) {
+                width: 33%;
+            }
+
+            @include breakpoint(breakpoints(desktop-wide)) {
+                width: 38%;
+            }
+
+            @include breakpoint(breakpoints(desktop)) {
+                width: 40%;
+                flex-wrap: wrap;
+            }
+
+            @include breakpoint(breakpoints(tablet-wide)) {
+                width: 48%;
+            }
 
             .opacity {
                 background: rgba(color(third), 0);
