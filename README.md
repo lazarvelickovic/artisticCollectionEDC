@@ -18,7 +18,7 @@ This is a site which purpose is to display and digitalize the rich art collectio
 - html
 - images
 - js
-- stylesheets
+- stylesheet
 
 ## Author
 
